@@ -1,11 +1,11 @@
 package com.batch.loginsample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import android.widget.Toolbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,10 +16,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val tool_bar = findViewById<Toolbar>(R.id.tool_bar)
-        setSupportActionBar(tool_bar)
-        tool_bar.setTitle("LOGIN")
 
         auth = FirebaseAuth.getInstance()
 
@@ -44,6 +40,10 @@ class MainActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+        }
+        signupButton.setOnClickListener {
+            val intent = Intent(application, SignupActivity::class.java)
+            startActivity(intent)
         }
     }
 }
