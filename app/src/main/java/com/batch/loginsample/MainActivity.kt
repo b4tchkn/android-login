@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
             val emailText = emailEditText.text.toString()
             val pwdText = pwdEditText.text.toString()
 
-            auth.signInWithEmailAndPassword(emailText, pwdText).addOnCompleteListener(this) { task ->
+            auth.signInWithEmailAndPassword(emailText, pwdText)
+                .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(
                         baseContext, "LOGIN SUCSESS",

@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/signupButton"
             android:layout_gravity="center"
+            android:background="@drawable/frame_style"
             android:text="sign up"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
